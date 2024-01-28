@@ -6,6 +6,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(opengl_adventures
     src/main.cpp
     src/glad.c
+    src/shaderClass.cpp
 )
 
 target_link_libraries(opengl_adventures glfw dl)

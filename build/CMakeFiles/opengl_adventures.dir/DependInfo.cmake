@@ -15,6 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michaelszeng/OpenGL-Adventures/src/main.cpp" "/home/michaelszeng/OpenGL-Adventures/build/CMakeFiles/opengl_adventures.dir/src/main.cpp.o"
+  "/home/michaelszeng/OpenGL-Adventures/src/shaderClass.cpp" "/home/michaelszeng/OpenGL-Adventures/build/CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

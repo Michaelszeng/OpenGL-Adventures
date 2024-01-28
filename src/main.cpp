@@ -4,20 +4,7 @@
 #include "../include/glad.h"
 #include <GLFW/glfw3.h>
 
-// Vertex Shader source code
-const char* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"void main()\n"
-"{\n"
-"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-"}\0";
-//Fragment Shader source code
-const char* fragmentShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"void main()\n"
-"{\n"
-"   FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);\n"
-"}\n\0";
+#include "shaderClass.h"
 
 int main() {
     glfwInit();
@@ -48,31 +35,12 @@ int main() {
     glViewport(0, 0, 800, 800);
 
 
-    // Create Vertex Shader object reference, assign its souce, and compile into machine code
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
-
-    // Create Fragment Shader object reference, assign its souce, and compile into machine code
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-
-    // Create Shader Program to wrap all of the shaders 
-    GLuint shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-
-    // Now that Shader objects are part of the Shader Program, delete them
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-
+    Shader shaderProgram("../shaders/default.vert", "../shaders/default.frag");
 
     /**
      * Bindings:
      * 
-     * Each type of object (i.e. buffer, texture) has a binding.
+     * Each type of object (i.e. vertex array, buffer, texture) has a binding.
      * 
      * By binding an object, you are making the "current" or "working" object;
      * future operation will modify the "working" object.
@@ -101,7 +69,8 @@ int main() {
         glClearColor(0.07, 0.13, 0.17, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);  // Clear then put new color in back buffer
 
-        glUseProgram(shaderProgram);  // Tell OpenGL what shader program to use
+        shaderProgram.Activate();
+
         glBindVertexArray(VAO);  // Bind the VAO we made as the "working object" that OpenGL will operate on
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
@@ -112,7 +81,7 @@ int main() {
 
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteProgram(shaderProgram);
+    shaderProgram.Delete();
 
     glfwDestroyWindow(window);
     glfwTerminate();

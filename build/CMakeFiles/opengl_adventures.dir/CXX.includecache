@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+../include/glad.h
+KHR/khrplatform.h
+-
+
+../include/shaderClass.h
+glad.h
+../include/glad.h
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+cerrno
+-
+
 /home/michaelszeng/OpenGL-Adventures/include/glad.h
 KHR/khrplatform.h
 -
@@ -19,4 +37,6 @@ unistd.h
 /home/michaelszeng/OpenGL-Adventures/include/glad.h
 GLFW/glfw3.h
 -
+shaderClass.h
+/home/michaelszeng/OpenGL-Adventures/src/shaderClass.h
 

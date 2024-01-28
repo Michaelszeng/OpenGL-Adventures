@@ -177,6 +177,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/opengl_adventures.dir/build.make CMakeFiles/opengl_adventures.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/shaderClass.o: src/shaderClass.cpp.o
+
+.PHONY : src/shaderClass.o
+
+# target to build an object file
+src/shaderClass.cpp.o:
+	$(MAKE) -f CMakeFiles/opengl_adventures.dir/build.make CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.o
+.PHONY : src/shaderClass.cpp.o
+
+src/shaderClass.i: src/shaderClass.cpp.i
+
+.PHONY : src/shaderClass.i
+
+# target to preprocess a source file
+src/shaderClass.cpp.i:
+	$(MAKE) -f CMakeFiles/opengl_adventures.dir/build.make CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.i
+.PHONY : src/shaderClass.cpp.i
+
+src/shaderClass.s: src/shaderClass.cpp.s
+
+.PHONY : src/shaderClass.s
+
+# target to generate assembly for a file
+src/shaderClass.cpp.s:
+	$(MAKE) -f CMakeFiles/opengl_adventures.dir/build.make CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.s
+.PHONY : src/shaderClass.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/shaderClass.o"
+	@echo "... src/shaderClass.i"
+	@echo "... src/shaderClass.s"
 .PHONY : help
 
 

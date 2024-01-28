@@ -5,5 +5,11 @@ CMakeFiles/opengl_adventures.dir/src/glad.c.o: ../include/glad.h
 CMakeFiles/opengl_adventures.dir/src/glad.c.o: ../src/glad.c
 
 CMakeFiles/opengl_adventures.dir/src/main.cpp.o: ../include/glad.h
+CMakeFiles/opengl_adventures.dir/src/main.cpp.o: ../include/shaderClass.h
+CMakeFiles/opengl_adventures.dir/src/main.cpp.o: ../include/glad.h
 CMakeFiles/opengl_adventures.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.o: ../include/glad.h
+CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.o: ../include/shaderClass.h
+CMakeFiles/opengl_adventures.dir/src/shaderClass.cpp.o: ../src/shaderClass.cpp
 
