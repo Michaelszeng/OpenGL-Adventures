@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/michaelszeng/OpenGL-Adventures/include/glad.h
+KHR/khrplatform.h
+-
+
+/home/michaelszeng/OpenGL-Adventures/src/main.cpp
+iostream
+-
+unistd.h
+-
+../include/glad.h
+/home/michaelszeng/OpenGL-Adventures/include/glad.h
+GLFW/glfw3.h
+-
+

@@ -1,0 +1,3 @@
+/home/michaelszeng/OpenGL-Adventures/build/CMakeFiles/rebuild_cache.dir
+/home/michaelszeng/OpenGL-Adventures/build/CMakeFiles/edit_cache.dir
+/home/michaelszeng/OpenGL-Adventures/build/CMakeFiles/opengl_adventures.dir

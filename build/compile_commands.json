@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/michaelszeng/OpenGL-Adventures/build",
+  "command": "/usr/bin/clang++-12   -I/home/michaelszeng/OpenGL-Adventures/include  -g   -o CMakeFiles/opengl_adventures.dir/src/main.cpp.o -c /home/michaelszeng/OpenGL-Adventures/src/main.cpp",
+  "file": "/home/michaelszeng/OpenGL-Adventures/src/main.cpp"
+},
+{
+  "directory": "/home/michaelszeng/OpenGL-Adventures/build",
+  "command": "/usr/bin/clang-12  -I/home/michaelszeng/OpenGL-Adventures/include  -g   -o CMakeFiles/opengl_adventures.dir/src/glad.c.o   -c /home/michaelszeng/OpenGL-Adventures/src/glad.c",
+  "file": "/home/michaelszeng/OpenGL-Adventures/src/glad.c"
+}
+]
